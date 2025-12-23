@@ -26,6 +26,16 @@ A small Node.js service that pings `apple.com` every minute, stores the results 
    npm start
    ```
 
+### Keep the service alive with PM2
+
+Install dependencies and then run the helper script to launch/restart via PM2:
+
+```bash
+./scripts/run_with_pm2.sh
+```
+
+This uses the local `pm2` dependency (invoked through `npx`) so restarts happen automatically if the process crashes. View runtime info with `npx pm2 status network-monitor` and logs via `npx pm2 logs network-monitor`.
+
 The app listens on `PORT` (default `3000`). Open the page in a browser, enter the password when prompted, and explore the timeline.
 
 ## Configuration
