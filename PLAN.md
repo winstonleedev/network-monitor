@@ -1,0 +1,21 @@
+- Implement a Node.JS project
+- The project should stay on and ping "apple.com" every minute
+- If the ping fails, log the time
+  - Log the time to a sqlite DB
+  - Keep the logs forever
+- The project should serve a HTTP page to view the ping status, exmplemented with Express
+- User must in put a password to use the page, password is defined in a `.env` variable, create sample .env
+- The page should have the following components
+  - Header
+    - Time selector (time range, or last 1 hours, last 6 hours, last 24 hours, last 7 days)
+    - Default to last 6 hours
+    - User should be able to select either arbitrary range or presets, include a radio group for this selection
+  - Body:
+    - Ping statuses displayed as blocks on a line
+    - Each block by default is 1 minute, for time range less than 6 hours
+    - For time range longer than 6 hours, each block represents 10 minutes
+    - For time range longer than 7 days, each block represents 1 hour
+    - If ping succeded, block should be green, use unicode emoji 🟩
+    - If ping failed, block should be red, use unicode emoji 🟥
+    - On hover a block, display the time that block represents in yyyy-mm-dd hh:mm , use tooltip
+    - At the end, display legend for the time period each block represents
