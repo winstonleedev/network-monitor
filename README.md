@@ -2,6 +2,8 @@
 
 A small Node.js service that pings `apple.com` every minute, stores the results in SQLite forever, and serves a password-protected dashboard for visualizing uptime blocks.
 
+<img src="docs/demo.png" alt="Demo screenshot" style="max-width:500px;" />
+
 ## Features
 
 - Background scheduler pings the configured host on a fixed cadence (default: every 60 seconds).
