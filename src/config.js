@@ -13,8 +13,4 @@ const config = {
     process.env.DATABASE_PATH || path.join(__dirname, '..', 'data', 'ping.sqlite'),
 };
 
-if (!config.statusPagePassword) {
-  throw new Error('STATUS_PAGE_PASSWORD is not set. Please create a .env file.');
-}
-
 module.exports = config;

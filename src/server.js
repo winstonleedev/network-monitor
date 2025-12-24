@@ -4,6 +4,10 @@ const config = require('./config');
 const { fetchResults } = require('./db');
 
 function createAuthMiddleware(password) {
+  if (!password) {
+    return (req, res, next) => next();
+  }
+  
   return function requirePassword(req, res, next) {
     const header = req.headers.authorization || '';
     const [scheme, encoded] = header.split(' ');
