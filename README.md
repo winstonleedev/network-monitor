@@ -54,3 +54,8 @@ All configuration is done through environment variables (see `.env.example`). Us
 ## Development
 
 Use `npm run dev` to start the process with `nodemon` for auto-restart on changes.
+
+
+## License
+
+[GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
